@@ -1,3 +1,6 @@
+from PIL import ImageFile
+ImageFile.LOAD_TRUNCATED_IMAGES = True
+
 import easyocr
 from PIL import Image
 import os
@@ -5,6 +8,7 @@ from os import listdir
 from subprocess import Popen, PIPE
 from os.path import isfile, join
 import sys
+ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 job_count = 20
 job_id = int(sys.argv[1])
